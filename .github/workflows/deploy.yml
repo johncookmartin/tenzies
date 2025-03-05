@@ -1,6 +1,7 @@
 name: Deploy Tenzies App to Github Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -8,6 +9,10 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout code
