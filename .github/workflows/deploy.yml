@@ -24,10 +24,10 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload artifacts
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
       - name: Deploy to Github Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
